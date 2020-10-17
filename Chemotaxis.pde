@@ -26,9 +26,6 @@ Bee[] bees;
      int b = 153;
  
    void move(){
-    
-    //myX = myX + (int)(Math.random()*5)-2;
-    //myY = myY + (int)(Math.random()*5)-2;
     if(mouseX>myX)
       myX = myX + (int)(Math.random()*5)-1;
     else
@@ -37,7 +34,6 @@ Bee[] bees;
       myY = myY + (int)(Math.random()*5)-1;
     else
       myY = myY + (int)(Math.random()*5)-3;
-   
    }
    
    void show(){
