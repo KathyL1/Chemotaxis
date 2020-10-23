@@ -24,7 +24,7 @@ Bee[] bees;
      int r = 255;
      int g = 240;
      int b = 153;
- 
+
    void move(){
     if(mouseX>myX)
       myX = myX + (int)(Math.random()*5)-1;
@@ -34,6 +34,13 @@ Bee[] bees;
       myY = myY + (int)(Math.random()*5)-1;
     else
       myY = myY + (int)(Math.random()*5)-3;
+      
+      if(mousePressed == true){
+        myY = mouseY;
+        myX = mouseX;
+        fill(150,253,256,200);
+        ellipse(myX, myY, 50, 75);
+      }
    }
    
    void show(){
@@ -54,4 +61,4 @@ Bee[] bees;
      line(myX-15,myY-7,myX-10,myY-2); //left antenna attacher
      triangle(myX+13,myY-2,myX+13,myY+2,myX+15,myY); //stinger
    }
- }    
+ }   
