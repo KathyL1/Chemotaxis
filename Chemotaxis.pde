@@ -21,9 +21,7 @@ Bee[] bees;
  
      int myX = (int)(Math.random()*750);
      int myY = (int)(Math.random()*750);
-     int r = 255;
-     int g = 240;
-     int b = 153;
+     int myColor = color(255,240,153);
 
    void move(){
     if(mouseX>myX)
@@ -46,11 +44,11 @@ Bee[] bees;
    void show(){
      stroke(0);
      strokeWeight(0.5);
-     fill(r,g,b);
+     fill(myColor);
      ellipse(myX,myY,25,20); //body
      fill(0);
      ellipse(myX-5,myY,2,2); //eyes
-     fill(r);
+     fill(255);
      ellipse(myX+5,myY+3,5,5); //wings
      fill(0);
      ellipse(myX-10,myY-10,2,2); //right antenna
@@ -61,4 +59,4 @@ Bee[] bees;
      line(myX-15,myY-7,myX-10,myY-2); //left antenna attacher
      triangle(myX+13,myY-2,myX+13,myY+2,myX+15,myY); //stinger
    }
- }   
+ }     
